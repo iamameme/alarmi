@@ -1,0 +1,6 @@
+rm -rf ./ios/build/DayNightBackground
+rm -rf ./ios/reddithistory/DayNightBackground
+rm -rf ./ios/DayNightBackground
+cp -r ./DayNightBackground ./ios/build/DayNightBackground
+cp -r ./DayNightBackground ./ios/reddithistory/DayNightBackground
+cp -r ./DayNightBackground ./ios/DayNightBackground

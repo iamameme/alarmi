@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <script>
+
+    </script>
+    <style>
+        /* body * {
+            transform: scale(1.3);
+        }*/
+
+        .canvas {
+            width: 1135px;
+            height: 2436px;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+            animation-name: daylight;
+            animation-duration: 300s;
+            animation-iteration-count: infinite;
+            overflow: hidden;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes daylight {
+            0% {
+                background-color: #70c4c6;
+            }
+
+            10% {
+                background-color: rgb(152, 217, 219);
+            }
+
+            45% {
+                background-color: #354a4a;
+            }
+
+            55% {
+                background-color: #354a4a;
+            }
+
+            90% {
+                background-color: rgb(152, 217, 219);
+            }
+
+            100% {
+                background-color: #70c4c6;
+            }
+        }
+
+        @keyframes fader {
+            0% {
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 0.4;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .wood {
+            border: 2px #000000 solid;
+            box-shadow: inset 1px 1px 1px 1px grey;
+            background-color: #6c2505;
+            background-size: 40px 160px, 60px 29px, 27px 27px;
+            background-image: linear-gradient(94deg, rgba(91, 33, 5, .1) 0%, rgba(83, 29, 4, 0.32) 23%, rgba(74, 24, 3, .41) 47%, rgba(80, 27, 5, 0.44) 70%, rgba(81, 27, 5, 0.59) 74%, rgba(93, 33, 4, 0.2) 83%, rgba(115, 43, 3, .5) 100%),
+                linear-gradient(90deg, #846a66 50%, transparent 50%),
+                linear-gradient(90deg, rgb(140, 120, 110) 50%, rgb(140, 120, 110) 50%);
+        }
+
+        .wood>*,
+        *::before,
+        *::after {
+            border: 2px #000000 solid;
+            box-shadow: inset 1px 1px 1px 1px grey;
+            background-color: #6c2505;
+            background-size: 40px 160px, 60px 29px, 27px 27px;
+            background-image: linear-gradient(94deg, rgba(91, 33, 5, .1) 0%, rgba(83, 29, 4, 0.32) 23%, rgba(74, 24, 3, .41) 47%, rgba(80, 27, 5, 0.44) 70%, rgba(81, 27, 5, 0.59) 74%, rgba(93, 33, 4, 0.2) 83%, rgba(115, 43, 3, .5) 100%),
+                linear-gradient(90deg, #846a66 50%, transparent 50%),
+                linear-gradient(90deg, rgb(140, 120, 110) 50%, rgb(140, 120, 110) 50%) !important;
+        }
+
+        .stick {
+            height: 100%;
+            width: 20px;
+        }
+
+        .sun-container {
+            height: 700px;
+            left: 40%;
+        }
+
+        .sun {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background: red;
+        }
+
+        .stick-container {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cloud-container-1 {
+            left: 60%;
+            height: 1000px;
+        }
+
+        .cloud {
+            width: 50px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 20px;
+            left: -20%;
+            animation-name: cloud;
+            animation-duration: 140s;
+            animation-iteration-count: infinite;
+            z-index: 1;
+        }
+
+        .cloud::before {
+            content: '';
+            width: 35px;
+            height: 30px;
+            background-color: #fff;
+            margin-left: -20px;
+            margin-top: 10px;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .cloud::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            position: absolute;
+            right: -10px;
+            top: 17px;
+            border-radius: 50%;
+        }
+
+        .content-background {
+            display: absolute;
+            z-index: 1;
+        }
+
+        .content-foreground {
+            display: absolute;
+            z-index: 100;
+        }
+
+        .content-foreground *,
+        *::before,
+        *::after {
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <div class="sun-container stick-container">
+            <div class="stick wood">
+
+            </div>
+            <div class="sun">
+
+            </div>
+        </div>
+        <div class="cloud-container-1 stick-container">
+            <div class="stick wood">
+
+            </div>
+            <div class="stick-content">
+                <div class="wood content-background cloud"></div>
+                <div class="content-foreground cloud"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
